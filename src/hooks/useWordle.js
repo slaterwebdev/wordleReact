@@ -7,6 +7,7 @@ const useWordle = (solution) => {
   const [guesses, setGuesses] = useState([...Array(6)]); // object construtor function to create 6 empty arrays as this is used to create the rows later on in the code
   const [history, setHistory] = useState([]); // each guess is a string
   const [isCorrect, setIsCorrect] = useState(false);
+  const [usedKeys, setUsedKeys] = useState({});
 
   // format a guess into an array of letter objects 
   // e.g. [{key: 'a', color: 'yellow'}]
@@ -57,7 +58,30 @@ const useWordle = (solution) => {
       });
 
       setTurn((prevTurn) => {
-          return prevTurn +1;
+          return prevTurn + 1;
+      });
+
+      setUsedKeys(prevUsedKeys => {
+          formattedGuess.forEach((l) => {
+            const currentColor = prevUsedKeys[l.key];
+            
+                if(l.color === 'green') {
+                    prevUsedKeys[l.key] = 'green'
+                    return
+                }
+
+                if(l.color === 'yellow' && currentColor !== 'green') {
+                    prevUsedKeys[l.key] = 'yellow'
+                    return
+                }
+
+                if(l.color === 'grey' && currentColor !== ('green' || 'yellow')) {
+                    prevUsedKeys[l.key] = 'grey'
+                    return
+                }
+          });
+          console.log(prevUsedKeys);
+          return prevUsedKeys;
       });
       setCurrentGuess('');
   }
@@ -100,7 +124,7 @@ const useWordle = (solution) => {
       }
   }
 
-  return {turn, currentGuess, guesses, isCorrect, handleKeyup}
+  return {turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup}
 }
 
 export default useWordle
