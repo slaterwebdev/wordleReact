@@ -1,4 +1,3 @@
-import { connectFirestoreEmulator } from 'firebase/firestore';
 import { useState } from 'react'
 
 const useWordle = (solution) => {

@@ -18,7 +18,6 @@ initializeApp(firebaseConfig);
 //initilize Services
 const db = getFirestore();
 
-
 const gettingDocs = getDocs(collection(db, 'solutions'));
 
 export default gettingDocs;
