@@ -136,6 +136,21 @@ h1 {
   color:#a1a1a1;
 }
 
+.modal div {
+  position: relative;
+}
+
+.close-modal {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
 /* keyframe animations */
 @keyframes flip {
   0% {

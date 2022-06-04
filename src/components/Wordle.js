@@ -46,6 +46,7 @@ export default function Wordle ({solution}) {
             {showRules &&
             <div className="modal" onClick={closeRules}>
                 <div>
+                  <p className="close-modal" onClick={closeRules} >X</p>
                   <h1>Rules!</h1>
                   <p>Try to guess the 5 letter words in only 6 turns.</p>
                   <br></br>

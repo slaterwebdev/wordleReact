@@ -6,6 +6,7 @@ function App() {
   const [solution, setSolution] = useState(null);
 
   useEffect(() => {
+    //Aquiring game data from firebase database 
     gettingDocs
     .then(snapshot => {
       let documents = [];
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Wordle</h1>
+      <h1>Wordle Clone</h1>
       {solution && <Wordle solution={solution} />}
     </div>
   );
