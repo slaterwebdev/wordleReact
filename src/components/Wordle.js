@@ -50,6 +50,8 @@ export default function Wordle ({solution}) {
                   <h1>Rules!</h1>
                   <p>Try to guess the 5 letter words in only 6 turns.</p>
                   <br></br>
+                  <p>Simply start typing to input a guess</p>
+                  <br></br>
                   <p><span className="green-rule">Green</span> - Right letter in the right place.</p>
                   <p><span className="yellow-rule" >Yellow</span> - Right letter in the wrong place.</p>
                   <p><span className="grey-rule" >Grey</span> - Wrong letter.</p>
