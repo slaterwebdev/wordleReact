@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/wordlereact/static/css/main.f5979a42.css",
-    "main.js": "/wordlereact/static/js/main.6a69a7bd.js",
+    "main.js": "/wordlereact/static/js/main.cd4ce31e.js",
     "index.html": "/wordlereact/index.html",
     "main.f5979a42.css.map": "/wordlereact/static/css/main.f5979a42.css.map",
-    "main.6a69a7bd.js.map": "/wordlereact/static/js/main.6a69a7bd.js.map"
+    "main.cd4ce31e.js.map": "/wordlereact/static/js/main.cd4ce31e.js.map"
   },
   "entrypoints": [
     "static/css/main.f5979a42.css",
-    "static/js/main.6a69a7bd.js"
+    "static/js/main.cd4ce31e.js"
   ]
 }
